@@ -12,6 +12,11 @@
 		1776244829365A1D003ECBA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1776244729365A1D003ECBA0 /* ViewController.swift */; };
 		1776244D29365A1E003ECBA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1776244C29365A1E003ECBA0 /* Assets.xcassets */; };
 		1776245029365A1E003ECBA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1776244E29365A1E003ECBA0 /* LaunchScreen.storyboard */; };
+		1776245B2936639B003ECBA0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1776245A2936639B003ECBA0 /* .swiftlint.yml */; };
+		177624612936658B003ECBA0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 177624602936658B003ECBA0 /* Alamofire */; };
+		17762464293665B2003ECBA0 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 17762463293665B2003ECBA0 /* Swinject */; };
+		1776246729366604003ECBA0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1776246629366604003ECBA0 /* SDWebImage */; };
+		1776246B29366714003ECBA0 /* AnimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1776246A29366714003ECBA0 /* AnimeResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,8 @@
 		1776244C29365A1E003ECBA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1776244F29365A1E003ECBA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1776245129365A1E003ECBA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1776245A2936639B003ECBA0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		1776246A29366714003ECBA0 /* AnimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1776246729366604003ECBA0 /* SDWebImage in Frameworks */,
+				177624612936658B003ECBA0 /* Alamofire in Frameworks */,
+				17762464293665B2003ECBA0 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,10 +64,14 @@
 		1776244229365A1D003ECBA0 /* Weabopedia */ = {
 			isa = PBXGroup;
 			children = (
+				1776245E29366550003ECBA0 /* Presentation */,
+				1776245D2936654B003ECBA0 /* Domain */,
+				1776245C29366542003ECBA0 /* Data */,
 				1776245829365AA3003ECBA0 /* Resource */,
 				1776245729365A8B003ECBA0 /* App */,
 				1776244729365A1D003ECBA0 /* ViewController.swift */,
 				1776245129365A1E003ECBA0 /* Info.plist */,
+				1776245A2936639B003ECBA0 /* .swiftlint.yml */,
 			);
 			path = Weabopedia;
 			sourceTree = "<group>";
@@ -80,6 +94,44 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		1776245C29366542003ECBA0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				17762468293666E5003ECBA0 /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1776245D2936654B003ECBA0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1776245E29366550003ECBA0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		17762468293666E5003ECBA0 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				1776246929366707003ECBA0 /* Response */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		1776246929366707003ECBA0 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				1776246A29366714003ECBA0 /* AnimeResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,12 +142,18 @@
 				1776243C29365A1D003ECBA0 /* Sources */,
 				1776243D29365A1D003ECBA0 /* Frameworks */,
 				1776243E29365A1D003ECBA0 /* Resources */,
+				17762459293661FC003ECBA0 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Weabopedia;
+			packageProductDependencies = (
+				177624602936658B003ECBA0 /* Alamofire */,
+				17762463293665B2003ECBA0 /* Swinject */,
+				1776246629366604003ECBA0 /* SDWebImage */,
+			);
 			productName = Weabopedia;
 			productReference = 1776244029365A1D003ECBA0 /* Weabopedia.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +182,11 @@
 				Base,
 			);
 			mainGroup = 1776243729365A1D003ECBA0;
+			packageReferences = (
+				1776245F2936658B003ECBA0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				17762462293665B2003ECBA0 /* XCRemoteSwiftPackageReference "Swinject" */,
+				1776246529366604003ECBA0 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 1776244129365A1D003ECBA0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,12 +201,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1776245B2936639B003ECBA0 /* .swiftlint.yml in Resources */,
 				1776245029365A1E003ECBA0 /* LaunchScreen.storyboard in Resources */,
 				1776244D29365A1E003ECBA0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17762459293661FC003ECBA0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then \n    swiftlint \nelse \n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1776243C29365A1D003ECBA0 /* Sources */ = {
@@ -153,6 +237,7 @@
 				1776244829365A1D003ECBA0 /* ViewController.swift in Sources */,
 				1776244429365A1D003ECBA0 /* AppDelegate.swift in Sources */,
 				1776244629365A1D003ECBA0 /* SceneDelegate.swift in Sources */,
+				1776246B29366714003ECBA0 /* AnimeResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +443,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1776245F2936658B003ECBA0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+		17762462293665B2003ECBA0 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.8.2;
+			};
+		};
+		1776246529366604003ECBA0 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.9.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		177624602936658B003ECBA0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1776245F2936658B003ECBA0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		17762463293665B2003ECBA0 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17762462293665B2003ECBA0 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		1776246629366604003ECBA0 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1776246529366604003ECBA0 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1776243829365A1D003ECBA0 /* Project object */;
 }
