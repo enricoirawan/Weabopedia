@@ -7,28 +7,29 @@
 
 import Foundation
 
-struct AnimeResponse: Codable {
-    let data: [Anime]
+// MARK: - AnimeResponses
+struct AnimeResponses: Codable {
+    let data: [AnimeResponse]
 }
 
 // MARK: - Anime
-struct Anime: Codable {
-    let malID: Int
-    let images: [String: Image]
+struct AnimeResponse: Codable {
+    let id: Int
+    let images: ImageResponse
     let title, titleEnglish: String
     let type: String
     let episodes: Int
     let status: String
-    let aired: Aired
+    let aired: AiredResponse
     let duration, rating: String
     let score: Double
     let scoredBy, rank: Int
     let synopsis, season: String
     let year: Int
-    let studios, genres: [Demographic]
+    let studios, genres: [FlexibleResponse]
 
     enum CodingKeys: String, CodingKey {
-        case malID = "mal_id"
+        case id = "mal_id"
         case images, title
         case titleEnglish = "title_english"
         case type, episodes, status, aired, duration, rating, score
@@ -38,7 +39,12 @@ struct Anime: Codable {
 }
 
 // MARK: - Image
-struct Image: Codable {
+struct ImageResponse: Codable {
+    let jpg: JpgResponse
+}
+
+// MARK: - Jpg
+struct JpgResponse: Codable {
     let imageURL, smallImageURL, largeImageURL: String
 
     enum CodingKeys: String, CodingKey {
@@ -49,35 +55,23 @@ struct Image: Codable {
 }
 
 // MARK: - Aired
-struct Aired: Codable {
-    let from, to: Date
-    let prop: Prop
+struct AiredResponse: Codable {
     let string: String
 }
 
-// MARK: - Prop
-struct Prop: Codable {
-    let from, to: From
-}
-
-// MARK: - From
-struct From: Codable {
-    let day, month, year: Int
-}
-
 // MARK: - Demographic
-struct Demographic: Codable {
-    let malID: Int
+struct FlexibleResponse: Codable {
+    let id: Int
     let type: TypeEnum
     let name: String
     let url: String
 
     enum CodingKeys: String, CodingKey {
-        case malID = "mal_id"
+        case id = "mal_id"
         case type, name, url
     }
 }
 
 enum TypeEnum: String, Codable {
-    case anime = "anime"
+    case anime
 }

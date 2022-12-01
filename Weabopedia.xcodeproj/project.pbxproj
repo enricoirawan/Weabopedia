@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1746A63829386FC200EBEBD3 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 1746A63729386FC200EBEBD3 /* SkeletonView */; };
+		174FA54329371C1200765B66 /* GetListAnimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FA54229371C1200765B66 /* GetListAnimeUseCase.swift */; };
+		174FA54829371FBF00765B66 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FA54729371FBF00765B66 /* Injection.swift */; };
+		17717FF129366DEE00803B5C /* AnimeRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17717FF029366DEE00803B5C /* AnimeRemoteDataSource.swift */; };
+		17717FF429366E7A00803B5C /* CustomErrorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17717FF329366E7A00803B5C /* CustomErrorExt.swift */; };
+		17717FF629366F1B00803B5C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17717FF529366F1B00803B5C /* Network.swift */; };
+		17717FF9293675B000803B5C /* AnimeRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17717FF8293675B000803B5C /* AnimeRepositoryImpl.swift */; };
+		17717FFC2936784A00803B5C /* AnimeRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17717FFB2936784A00803B5C /* AnimeRemoteRepository.swift */; };
+		1771800129367BDE00803B5C /* AnimeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771800029367BDE00803B5C /* AnimeMapper.swift */; };
+		1771800429367C4300803B5C /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771800329367C4300803B5C /* Anime.swift */; };
 		1776244429365A1D003ECBA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1776244329365A1D003ECBA0 /* AppDelegate.swift */; };
 		1776244629365A1D003ECBA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1776244529365A1D003ECBA0 /* SceneDelegate.swift */; };
-		1776244829365A1D003ECBA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1776244729365A1D003ECBA0 /* ViewController.swift */; };
 		1776244D29365A1E003ECBA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1776244C29365A1E003ECBA0 /* Assets.xcassets */; };
 		1776245029365A1E003ECBA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1776244E29365A1E003ECBA0 /* LaunchScreen.storyboard */; };
 		1776245B2936639B003ECBA0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1776245A2936639B003ECBA0 /* .swiftlint.yml */; };
@@ -17,18 +26,50 @@
 		17762464293665B2003ECBA0 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 17762463293665B2003ECBA0 /* Swinject */; };
 		1776246729366604003ECBA0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1776246629366604003ECBA0 /* SDWebImage */; };
 		1776246B29366714003ECBA0 /* AnimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1776246A29366714003ECBA0 /* AnimeResponse.swift */; };
+		17F6F47429372EB200B3B041 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F47329372EB200B3B041 /* BaseViewController.swift */; };
+		17F6F476293732A300B3B041 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F475293732A300B3B041 /* HomeViewController.swift */; };
+		17F6F478293732BA00B3B041 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F477293732BA00B3B041 /* FavoriteViewController.swift */; };
+		17F6F47A293742AD00B3B041 /* GenreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F479293742AD00B3B041 /* GenreResponse.swift */; };
+		17F6F47C293743FA00B3B041 /* GenreRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F47B293743FA00B3B041 /* GenreRemoteDataSource.swift */; };
+		17F6F47E2937467000B3B041 /* GenreRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F47D2937467000B3B041 /* GenreRepositoryImpl.swift */; };
+		17F6F4802937468500B3B041 /* GenreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F47F2937468500B3B041 /* GenreRepository.swift */; };
+		17F6F482293746A700B3B041 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F481293746A700B3B041 /* Genre.swift */; };
+		17F6F4842937475400B3B041 /* GenreMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F4832937475400B3B041 /* GenreMapper.swift */; };
+		17F6F486293748D900B3B041 /* GetListGenreUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F485293748D900B3B041 /* GetListGenreUseCase.swift */; };
+		17F6F48829375C4E00B3B041 /* ConstraintsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F48729375C4E00B3B041 /* ConstraintsExt.swift */; };
+		17F6F48C293770CB00B3B041 /* GenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F48B293770CB00B3B041 /* GenreCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		174FA54229371C1200765B66 /* GetListAnimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListAnimeUseCase.swift; sourceTree = "<group>"; };
+		174FA54729371FBF00765B66 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		17717FF029366DEE00803B5C /* AnimeRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeRemoteDataSource.swift; sourceTree = "<group>"; };
+		17717FF329366E7A00803B5C /* CustomErrorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorExt.swift; sourceTree = "<group>"; };
+		17717FF529366F1B00803B5C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		17717FF8293675B000803B5C /* AnimeRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeRepositoryImpl.swift; sourceTree = "<group>"; };
+		17717FFB2936784A00803B5C /* AnimeRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeRemoteRepository.swift; sourceTree = "<group>"; };
+		1771800029367BDE00803B5C /* AnimeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeMapper.swift; sourceTree = "<group>"; };
+		1771800329367C4300803B5C /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 		1776244029365A1D003ECBA0 /* Weabopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weabopedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1776244329365A1D003ECBA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1776244529365A1D003ECBA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1776244729365A1D003ECBA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1776244C29365A1E003ECBA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1776244F29365A1E003ECBA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1776245129365A1E003ECBA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1776245A2936639B003ECBA0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		1776246A29366714003ECBA0 /* AnimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeResponse.swift; sourceTree = "<group>"; };
+		17F6F47329372EB200B3B041 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		17F6F475293732A300B3B041 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		17F6F477293732BA00B3B041 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		17F6F479293742AD00B3B041 /* GenreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreResponse.swift; sourceTree = "<group>"; };
+		17F6F47B293743FA00B3B041 /* GenreRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreRemoteDataSource.swift; sourceTree = "<group>"; };
+		17F6F47D2937467000B3B041 /* GenreRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreRepositoryImpl.swift; sourceTree = "<group>"; };
+		17F6F47F2937468500B3B041 /* GenreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreRepository.swift; sourceTree = "<group>"; };
+		17F6F481293746A700B3B041 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		17F6F4832937475400B3B041 /* GenreMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreMapper.swift; sourceTree = "<group>"; };
+		17F6F485293748D900B3B041 /* GetListGenreUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListGenreUseCase.swift; sourceTree = "<group>"; };
+		17F6F48729375C4E00B3B041 /* ConstraintsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintsExt.swift; sourceTree = "<group>"; };
+		17F6F48B293770CB00B3B041 /* GenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1746A63829386FC200EBEBD3 /* SkeletonView in Frameworks */,
 				1776246729366604003ECBA0 /* SDWebImage in Frameworks */,
 				177624612936658B003ECBA0 /* Alamofire in Frameworks */,
 				17762464293665B2003ECBA0 /* Swinject in Frameworks */,
@@ -45,6 +87,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		174FA54129371BCE00765B66 /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				174FA54229371C1200765B66 /* GetListAnimeUseCase.swift */,
+				17F6F485293748D900B3B041 /* GetListGenreUseCase.swift */,
+			);
+			path = Usecase;
+			sourceTree = "<group>";
+		};
+		174FA54429371F7B00765B66 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				174FA54729371FBF00765B66 /* Injection.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		17717FF229366E3D00803B5C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				17717FFF29367BCC00803B5C /* Mapper */,
+				17717FFE29367BC700803B5C /* Extensions */,
+				17717FFD29367BC100803B5C /* Network */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		17717FF7293675A300803B5C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				17717FF8293675B000803B5C /* AnimeRepositoryImpl.swift */,
+				17F6F47D2937467000B3B041 /* GenreRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		17717FFA2936783600803B5C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				17717FFB2936784A00803B5C /* AnimeRemoteRepository.swift */,
+				17F6F47F2937468500B3B041 /* GenreRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		17717FFD29367BC100803B5C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				17717FF529366F1B00803B5C /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		17717FFE29367BC700803B5C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				17717FF329366E7A00803B5C /* CustomErrorExt.swift */,
+				17F6F48729375C4E00B3B041 /* ConstraintsExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		17717FFF29367BCC00803B5C /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				1771800029367BDE00803B5C /* AnimeMapper.swift */,
+				17F6F4832937475400B3B041 /* GenreMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		1771800229367C3C00803B5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1771800329367C4300803B5C /* Anime.swift */,
+				17F6F481293746A700B3B041 /* Genre.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1776243729365A1D003ECBA0 = {
 			isa = PBXGroup;
 			children = (
@@ -64,14 +186,15 @@
 		1776244229365A1D003ECBA0 /* Weabopedia */ = {
 			isa = PBXGroup;
 			children = (
-				1776245E29366550003ECBA0 /* Presentation */,
-				1776245D2936654B003ECBA0 /* Domain */,
-				1776245C29366542003ECBA0 /* Data */,
-				1776245829365AA3003ECBA0 /* Resource */,
 				1776245729365A8B003ECBA0 /* App */,
-				1776244729365A1D003ECBA0 /* ViewController.swift */,
-				1776245129365A1E003ECBA0 /* Info.plist */,
+				174FA54429371F7B00765B66 /* DI */,
+				17717FF229366E3D00803B5C /* Utils */,
+				1776245829365AA3003ECBA0 /* Resource */,
+				1776245C29366542003ECBA0 /* Data */,
+				1776245D2936654B003ECBA0 /* Domain */,
+				1776245E29366550003ECBA0 /* Presentation */,
 				1776245A2936639B003ECBA0 /* .swiftlint.yml */,
+				1776245129365A1E003ECBA0 /* Info.plist */,
 			);
 			path = Weabopedia;
 			sourceTree = "<group>";
@@ -97,6 +220,8 @@
 		1776245C29366542003ECBA0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1776246929366707003ECBA0 /* Response */,
+				17717FF7293675A300803B5C /* Repository */,
 				17762468293666E5003ECBA0 /* Remote */,
 			);
 			path = Data;
@@ -105,6 +230,9 @@
 		1776245D2936654B003ECBA0 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				174FA54129371BCE00765B66 /* Usecase */,
+				1771800229367C3C00803B5C /* Model */,
+				17717FFA2936783600803B5C /* Repository */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -112,6 +240,8 @@
 		1776245E29366550003ECBA0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				17F6F48A2937702700B3B041 /* UI */,
+				17F6F4892937701800B3B041 /* View */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -119,7 +249,8 @@
 		17762468293666E5003ECBA0 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				1776246929366707003ECBA0 /* Response */,
+				17717FF029366DEE00803B5C /* AnimeRemoteDataSource.swift */,
+				17F6F47B293743FA00B3B041 /* GenreRemoteDataSource.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -128,8 +259,51 @@
 			isa = PBXGroup;
 			children = (
 				1776246A29366714003ECBA0 /* AnimeResponse.swift */,
+				17F6F479293742AD00B3B041 /* GenreResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		17F6F46F29372E7000B3B041 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				17F6F477293732BA00B3B041 /* FavoriteViewController.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		17F6F47129372E8200B3B041 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				17F6F475293732A300B3B041 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		17F6F47229372E8E00B3B041 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				17F6F47329372EB200B3B041 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		17F6F4892937701800B3B041 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17F6F48B293770CB00B3B041 /* GenreCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17F6F48A2937702700B3B041 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				17F6F47229372E8E00B3B041 /* Base */,
+				17F6F47129372E8200B3B041 /* Home */,
+				17F6F46F29372E7000B3B041 /* Favorite */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +327,7 @@
 				177624602936658B003ECBA0 /* Alamofire */,
 				17762463293665B2003ECBA0 /* Swinject */,
 				1776246629366604003ECBA0 /* SDWebImage */,
+				1746A63729386FC200EBEBD3 /* SkeletonView */,
 			);
 			productName = Weabopedia;
 			productReference = 1776244029365A1D003ECBA0 /* Weabopedia.app */;
@@ -186,6 +361,7 @@
 				1776245F2936658B003ECBA0 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				17762462293665B2003ECBA0 /* XCRemoteSwiftPackageReference "Swinject" */,
 				1776246529366604003ECBA0 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				1746A63629386FC200EBEBD3 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = 1776244129365A1D003ECBA0 /* Products */;
 			projectDirPath = "";
@@ -234,10 +410,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1776244829365A1D003ECBA0 /* ViewController.swift in Sources */,
+				17F6F486293748D900B3B041 /* GetListGenreUseCase.swift in Sources */,
+				17F6F47429372EB200B3B041 /* BaseViewController.swift in Sources */,
+				17F6F48829375C4E00B3B041 /* ConstraintsExt.swift in Sources */,
+				17F6F482293746A700B3B041 /* Genre.swift in Sources */,
+				1771800429367C4300803B5C /* Anime.swift in Sources */,
 				1776244429365A1D003ECBA0 /* AppDelegate.swift in Sources */,
+				174FA54829371FBF00765B66 /* Injection.swift in Sources */,
+				17F6F4802937468500B3B041 /* GenreRepository.swift in Sources */,
+				17F6F478293732BA00B3B041 /* FavoriteViewController.swift in Sources */,
+				17717FF9293675B000803B5C /* AnimeRepositoryImpl.swift in Sources */,
+				17F6F476293732A300B3B041 /* HomeViewController.swift in Sources */,
 				1776244629365A1D003ECBA0 /* SceneDelegate.swift in Sources */,
+				1771800129367BDE00803B5C /* AnimeMapper.swift in Sources */,
+				17F6F4842937475400B3B041 /* GenreMapper.swift in Sources */,
+				17717FF129366DEE00803B5C /* AnimeRemoteDataSource.swift in Sources */,
 				1776246B29366714003ECBA0 /* AnimeResponse.swift in Sources */,
+				17F6F48C293770CB00B3B041 /* GenreCollectionViewCell.swift in Sources */,
+				17717FF629366F1B00803B5C /* Network.swift in Sources */,
+				17F6F47C293743FA00B3B041 /* GenreRemoteDataSource.swift in Sources */,
+				17717FFC2936784A00803B5C /* AnimeRemoteRepository.swift in Sources */,
+				17717FF429366E7A00803B5C /* CustomErrorExt.swift in Sources */,
+				17F6F47A293742AD00B3B041 /* GenreResponse.swift in Sources */,
+				174FA54329371C1200765B66 /* GetListAnimeUseCase.swift in Sources */,
+				17F6F47E2937467000B3B041 /* GenreRepositoryImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +641,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1746A63629386FC200EBEBD3 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.9.0;
+			};
+		};
 		1776245F2936658B003ECBA0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -472,6 +676,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1746A63729386FC200EBEBD3 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1746A63629386FC200EBEBD3 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
 		177624602936658B003ECBA0 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1776245F2936658B003ECBA0 /* XCRemoteSwiftPackageReference "Alamofire" */;
