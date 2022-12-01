@@ -26,6 +26,7 @@
 		17762464293665B2003ECBA0 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 17762463293665B2003ECBA0 /* Swinject */; };
 		1776246729366604003ECBA0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1776246629366604003ECBA0 /* SDWebImage */; };
 		1776246B29366714003ECBA0 /* AnimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1776246A29366714003ECBA0 /* AnimeResponse.swift */; };
+		17B285FB2938C2BC0041CC95 /* AnimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B285FA2938C2BC0041CC95 /* AnimeCollectionViewCell.swift */; };
 		17F6F47429372EB200B3B041 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F47329372EB200B3B041 /* BaseViewController.swift */; };
 		17F6F476293732A300B3B041 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F475293732A300B3B041 /* HomeViewController.swift */; };
 		17F6F478293732BA00B3B041 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F477293732BA00B3B041 /* FavoriteViewController.swift */; };
@@ -58,6 +59,7 @@
 		1776245129365A1E003ECBA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1776245A2936639B003ECBA0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		1776246A29366714003ECBA0 /* AnimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeResponse.swift; sourceTree = "<group>"; };
+		17B285FA2938C2BC0041CC95 /* AnimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCollectionViewCell.swift; sourceTree = "<group>"; };
 		17F6F47329372EB200B3B041 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		17F6F475293732A300B3B041 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		17F6F477293732BA00B3B041 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				17F6F48B293770CB00B3B041 /* GenreCollectionViewCell.swift */,
+				17B285FA2938C2BC0041CC95 /* AnimeCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				17F6F48C293770CB00B3B041 /* GenreCollectionViewCell.swift in Sources */,
 				17717FF629366F1B00803B5C /* Network.swift in Sources */,
 				17F6F47C293743FA00B3B041 /* GenreRemoteDataSource.swift in Sources */,
+				17B285FB2938C2BC0041CC95 /* AnimeCollectionViewCell.swift in Sources */,
 				17717FFC2936784A00803B5C /* AnimeRemoteRepository.swift in Sources */,
 				17717FF429366E7A00803B5C /* CustomErrorExt.swift in Sources */,
 				17F6F47A293742AD00B3B041 /* GenreResponse.swift in Sources */,

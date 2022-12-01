@@ -16,16 +16,18 @@ struct AnimeResponses: Codable {
 struct AnimeResponse: Codable {
     let id: Int
     let images: ImageResponse
-    let title, titleEnglish: String
+    let title: String
+    let titleEnglish: String?
     let type: String
-    let episodes: Int
+    let episodes: Int?
     let status: String
     let aired: AiredResponse
     let duration, rating: String
     let score: Double
     let scoredBy, rank: Int
-    let synopsis, season: String
-    let year: Int
+    let synopsis: String
+    let season: String?
+    let year: Int?
     let studios, genres: [FlexibleResponse]
 
     enum CodingKeys: String, CodingKey {

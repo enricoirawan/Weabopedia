@@ -16,9 +16,9 @@ final class AnimeMapper {
                 id: result.id,
                 images: mapImageResponseToDomains(input: result.images),
                 title: result.title,
-                titleEnglish: result.titleEnglish,
+                titleEnglish: result.titleEnglish ?? "-",
                 type: result.type,
-                episodes: result.episodes,
+                episodes: result.episodes ?? 0,
                 status: result.status,
                 aired: mapAiredResponseToDomains(input: result.aired),
                 duration: result.duration,
@@ -29,8 +29,8 @@ final class AnimeMapper {
                     result.scoredBy,
                 rank: result.rank,
                 synopsis: result.synopsis,
-                season: result.season,
-                year: result.year,
+                season: result.season ?? "?",
+                year: result.year ?? 0,
                 studios: mapFlexibleResponsesToDomains(input: result.studios),
                 genres: mapFlexibleResponsesToDomains(input: result.genres)
             )
