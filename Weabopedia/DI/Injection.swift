@@ -44,11 +44,17 @@ class Injection {
                 )!
             )
         }
-        // MARK: - Use Case
         container.register(GetListGenreUseCase.self) { resolver in
             GetListGenreUseCase(
                 genreRepository: resolver.resolve(
                     GenreRepository.self
+                )!
+            )
+        }
+        container.register(GetAnimeDetailUseCase.self) { resolver in
+            GetAnimeDetailUseCase(
+                animeRepository: resolver.resolve(
+                    AnimeRepository.self
                 )!
             )
         }
@@ -58,6 +64,11 @@ class Injection {
             let controller = HomeViewController()
             controller.getListAnimeUseCase = resolver.resolve(GetListAnimeUseCase.self)
             controller.getListGenreUseCase = resolver.resolve(GetListGenreUseCase.self)
+            return controller
+        }
+        container.register(DetailViewController.self) { resolver in
+            let controller = DetailViewController()
+            controller.getAnimeDetailUseCase = resolver.resolve(GetAnimeDetailUseCase.self)
             return controller
         }
         return container

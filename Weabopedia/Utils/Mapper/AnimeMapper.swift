@@ -73,4 +73,29 @@ final class AnimeMapper {
             )
         }
     }
+    
+    static func mapAnimeResponseToDomains(
+        input animeResponse: AnimeResponse
+    ) -> Anime {
+        return Anime(
+            id: animeResponse.id,
+            images: mapImageResponseToDomains(input: animeResponse.images),
+            title: animeResponse.title,
+            titleEnglish: animeResponse.titleEnglish ?? "-",
+            type: animeResponse.type,
+            episodes: animeResponse.episodes ?? 0,
+            status: animeResponse.status,
+            aired: mapAiredResponseToDomains(input: animeResponse.aired),
+            duration: animeResponse.duration,
+            rating: animeResponse.rating,
+            score: animeResponse.score,
+            scoredBy: animeResponse.scoredBy,
+            rank: animeResponse.rank,
+            synopsis: animeResponse.synopsis,
+            season: animeResponse.season ?? "-",
+            year: animeResponse.year ?? 0,
+            studios: mapFlexibleResponsesToDomains(input: animeResponse.studios),
+            genres: mapFlexibleResponsesToDomains(input: animeResponse.genres)
+        )
+    }
 }

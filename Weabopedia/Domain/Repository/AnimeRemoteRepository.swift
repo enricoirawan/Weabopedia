@@ -10,4 +10,5 @@ import Combine
 
 protocol AnimeRepository: AnyObject {
     func getListAnime(withGenreId genreId: Int) -> AnyPublisher<[Anime], Error>
+    func getAnimeDetail(withAnimeId id: Int) -> AnyPublisher<Anime, Error>
 }

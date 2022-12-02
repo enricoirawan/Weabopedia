@@ -20,4 +20,10 @@ class AnimeRepositoryImpl: AnimeRepository {
             .map { AnimeMapper.mapAnimeResponsesToDomains(input: $0) }
             .eraseToAnyPublisher()
     }
+    
+    func getAnimeDetail(withAnimeId id: Int) -> AnyPublisher<Anime, Error> {
+        return animeRemoteDataSource.getAnimeDetail(withId: id)
+            .map { AnimeMapper.mapAnimeResponseToDomains(input: $0) }
+            .eraseToAnyPublisher()
+    }
 }

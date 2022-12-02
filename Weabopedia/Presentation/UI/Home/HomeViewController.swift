@@ -61,6 +61,11 @@ class HomeViewController: UIViewController {
     }()
     
     // MARK: - Life Cycle
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -118,9 +123,10 @@ class HomeViewController: UIViewController {
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
-                case .failure(let error):
-                    print("Error \(error.localizedDescription)")
-                    print("\(String(describing: completion))")
+                case .failure:
+                    let alert = UIAlertController(title: "Alert", message: String(describing: completion), preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(alert, animated: true)
                 case .finished:
                     self.genreCollectionView.hideSkeleton(reloadDataAfter: true)
                     
@@ -146,9 +152,10 @@ class HomeViewController: UIViewController {
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
-                case .failure(let error):
-                    print("Error \(error.localizedDescription)")
-                    print("\(String(describing: completion))")
+                case .failure:
+                    let alert = UIAlertController(title: "Alert", message: String(describing: completion), preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(alert, animated: true)
                 case .finished:
                     self.refreshControl.endRefreshing()
                     self.animeCollectionView.hideSkeleton(reloadDataAfter: true)
@@ -215,13 +222,33 @@ extension HomeViewController: SkeletonCollectionViewDataSource, SkeletonCollecti
         return animeCell
     }
     
+    // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.genreCollectionView {
             guard let genreList = genreList else { return }
             let selectedGenre = genreList[indexPath.row]
             self.selectedGenreId = selectedGenre.id
             loadAnime(withGenreId: selectedGenre.id)
+            return
         }
+        
+        guard let animeList = animeList else {return}
+        let selectedAnimeId = animeList[indexPath.row].id
+        
+        let detailVC = Injection().container.resolve(DetailViewController.self)
+        guard let detailVC = detailVC else { return }
+        detailVC.configure(withAnimeId: selectedAnimeId)
+        
+        let nav = UINavigationController(rootViewController: detailVC)
+        nav.modalPresentationStyle = .fullScreen
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .systemOrange
+        nav.navigationBar.standardAppearance = appearance
+        nav.navigationBar.scrollEdgeAppearance = nav.navigationBar.standardAppearance
+        nav.navigationBar.tintColor = .white
+        present(nav, animated: true)
     }
     
     // MARK: - UICollectionViewDelegateFlowLayout
