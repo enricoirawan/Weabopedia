@@ -5,8 +5,6 @@
 //  Created by Enrico Irawan on 30/11/22.
 //
 
-import Foundation
-
 final class GenreMapper {
     static func mapGenreResponsesToDomains(
         input genreResponses: [GenreResponse]

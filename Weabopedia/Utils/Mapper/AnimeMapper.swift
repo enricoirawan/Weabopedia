@@ -5,8 +5,6 @@
 //  Created by Enrico Irawan on 30/11/22.
 //
 
-import Foundation
-
 final class AnimeMapper {
     static func mapAnimeResponsesToDomains(
         input animeResponses: [AnimeResponse]
@@ -22,13 +20,11 @@ final class AnimeMapper {
                 status: result.status,
                 aired: mapAiredResponseToDomains(input: result.aired),
                 duration: result.duration,
-                rating: result.rating,
-                score:
-                    result.score,
-                scoredBy:
-                    result.scoredBy,
+                rating: result.rating ?? "-",
+                score: result.score ?? 0.0,
+                scoredBy: result.scoredBy ?? 0,
                 rank: result.rank,
-                synopsis: result.synopsis,
+                synopsis: result.synopsis ?? "-",
                 season: result.season ?? "?",
                 year: result.year ?? 0,
                 studios: mapFlexibleResponsesToDomains(input: result.studios),
@@ -87,11 +83,11 @@ final class AnimeMapper {
             status: animeResponse.status,
             aired: mapAiredResponseToDomains(input: animeResponse.aired),
             duration: animeResponse.duration,
-            rating: animeResponse.rating,
-            score: animeResponse.score,
-            scoredBy: animeResponse.scoredBy,
+            rating: animeResponse.rating ?? "-",
+            score: animeResponse.score ?? 0.0,
+            scoredBy: animeResponse.scoredBy ?? 0,
             rank: animeResponse.rank,
-            synopsis: animeResponse.synopsis,
+            synopsis: animeResponse.synopsis ?? "-",
             season: animeResponse.season ?? "-",
             year: animeResponse.year ?? 0,
             studios: mapFlexibleResponsesToDomains(input: animeResponse.studios),

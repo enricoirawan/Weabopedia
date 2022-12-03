@@ -40,6 +40,9 @@
 		17B2860029391BCC0041CC95 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B285FF29391BCC0041CC95 /* DetailViewController.swift */; };
 		17B28602293923F90041CC95 /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B28601293923F90041CC95 /* DetailHeaderView.swift */; };
 		17B2860429392B670041CC95 /* SynopsisCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B2860329392B670041CC95 /* SynopsisCollectionViewCell.swift */; };
+		17C14C55293B82CD000A3A05 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C14C54293B82CC000A3A05 /* SearchViewController.swift */; };
+		17C14C57293B85C5000A3A05 /* AnimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C14C56293B85C5000A3A05 /* AnimeTableViewCell.swift */; };
+		17C14C59293B8AC4000A3A05 /* SearchAnimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C14C58293B8AC4000A3A05 /* SearchAnimeUseCase.swift */; };
 		17F6F47429372EB200B3B041 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F47329372EB200B3B041 /* BaseViewController.swift */; };
 		17F6F476293732A300B3B041 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F475293732A300B3B041 /* HomeViewController.swift */; };
 		17F6F478293732BA00B3B041 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F6F477293732BA00B3B041 /* FavoriteViewController.swift */; };
@@ -86,6 +89,9 @@
 		17B285FF29391BCC0041CC95 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		17B28601293923F90041CC95 /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
 		17B2860329392B670041CC95 /* SynopsisCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynopsisCollectionViewCell.swift; sourceTree = "<group>"; };
+		17C14C54293B82CC000A3A05 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		17C14C56293B85C5000A3A05 /* AnimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTableViewCell.swift; sourceTree = "<group>"; };
+		17C14C58293B8AC4000A3A05 /* SearchAnimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAnimeUseCase.swift; sourceTree = "<group>"; };
 		17F6F47329372EB200B3B041 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		17F6F475293732A300B3B041 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		17F6F477293732BA00B3B041 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 				174FA54229371C1200765B66 /* GetListAnimeUseCase.swift */,
 				17F6F485293748D900B3B041 /* GetListGenreUseCase.swift */,
 				17B285FC2939190F0041CC95 /* GetAnimeDetailUseCase.swift */,
+				17C14C58293B8AC4000A3A05 /* SearchAnimeUseCase.swift */,
 			);
 			path = Usecase;
 			sourceTree = "<group>";
@@ -310,6 +317,14 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		17C14C53293B82BF000A3A05 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				17C14C54293B82CC000A3A05 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		17F6F46F29372E7000B3B041 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +363,7 @@
 				1766F76B293A810A007C141B /* SeasonCollectionViewCell.swift */,
 				1766F76D293A8110007C141B /* StudioCollectionViewCell.swift */,
 				1766F772293A941A007C141B /* AccountHeaderUIView.swift */,
+				17C14C56293B85C5000A3A05 /* AnimeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,6 +371,7 @@
 		17F6F48A2937702700B3B041 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				17C14C53293B82BF000A3A05 /* Search */,
 				1766F76F293A9318007C141B /* Account */,
 				17F6F47229372E8E00B3B041 /* Base */,
 				17B285FE29391BB20041CC95 /* Detail */,
@@ -480,15 +497,18 @@
 				1766F768293A80FE007C141B /* DurationCollectionViewCell.swift in Sources */,
 				174FA54829371FBF00765B66 /* Injection.swift in Sources */,
 				17F6F4802937468500B3B041 /* GenreRepository.swift in Sources */,
+				17C14C59293B8AC4000A3A05 /* SearchAnimeUseCase.swift in Sources */,
 				17B2860029391BCC0041CC95 /* DetailViewController.swift in Sources */,
 				1766F76C293A810A007C141B /* SeasonCollectionViewCell.swift in Sources */,
 				1766F766293A80F1007C141B /* EpisodeCollectionViewCell.swift in Sources */,
 				1758EAB7293A0370002573A6 /* AnimeDetailResponse.swift in Sources */,
+				17C14C57293B85C5000A3A05 /* AnimeTableViewCell.swift in Sources */,
 				1766F764293A690B007C141B /* GenreDetailCollectionViewCell.swift in Sources */,
 				17F6F478293732BA00B3B041 /* FavoriteViewController.swift in Sources */,
 				17717FF9293675B000803B5C /* AnimeRepositoryImpl.swift in Sources */,
 				17B28602293923F90041CC95 /* DetailHeaderView.swift in Sources */,
 				17F6F476293732A300B3B041 /* HomeViewController.swift in Sources */,
+				17C14C55293B82CD000A3A05 /* SearchViewController.swift in Sources */,
 				1776244629365A1D003ECBA0 /* SceneDelegate.swift in Sources */,
 				1771800129367BDE00803B5C /* AnimeMapper.swift in Sources */,
 				17F6F4842937475400B3B041 /* GenreMapper.swift in Sources */,

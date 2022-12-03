@@ -4,8 +4,6 @@
 //
 //  Created by Enrico Irawan on 30/11/22.
 //
-
-import Foundation
 import Combine
 
 class AnimeRepositoryImpl: AnimeRepository {
@@ -24,6 +22,12 @@ class AnimeRepositoryImpl: AnimeRepository {
     func getAnimeDetail(withAnimeId id: Int) -> AnyPublisher<Anime, Error> {
         return animeRemoteDataSource.getAnimeDetail(withId: id)
             .map { AnimeMapper.mapAnimeResponseToDomains(input: $0) }
+            .eraseToAnyPublisher()
+    }
+    
+    func searchAnime(withQuery query: String) -> AnyPublisher<[Anime], Error> {
+        return animeRemoteDataSource.searchAnime(withQuery: query)
+            .map { AnimeMapper.mapAnimeResponsesToDomains(input: $0) }
             .eraseToAnyPublisher()
     }
 }

@@ -5,8 +5,6 @@
 //  Created by Enrico Irawan on 30/11/22.
 //
 
-import Foundation
-
 struct Anime: Equatable, Identifiable {
     let id: Int
     let images: Image

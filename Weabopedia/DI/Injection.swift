@@ -4,8 +4,6 @@
 //
 //  Created by Enrico Irawan on 30/11/22.
 //
-
-import Foundation
 import Swinject
 
 class Injection {
@@ -58,6 +56,13 @@ class Injection {
                 )!
             )
         }
+        container.register(SearchAnimeUseCase.self) { resolver in
+            SearchAnimeUseCase(
+                animeRepository: resolver.resolve(
+                    AnimeRepository.self
+                )!
+            )
+        }
         
         // MARK: - Presenter
         container.register(HomeViewController.self) { resolver in
@@ -69,6 +74,11 @@ class Injection {
         container.register(DetailViewController.self) { resolver in
             let controller = DetailViewController()
             controller.getAnimeDetailUseCase = resolver.resolve(GetAnimeDetailUseCase.self)
+            return controller
+        }
+        container.register(SearchViewController.self) { resolver in
+            let controller = SearchViewController()
+            controller.searchAnimeUseCase = resolver.resolve(SearchAnimeUseCase.self)
             return controller
         }
         return container

@@ -27,7 +27,11 @@ class BaseViewController: UITabBarController {
         let accountImage = UIImage(systemName: "person")
         let account = templateNavigationController(image: accountImage, rootViewController: AccountViewController(), title: "Account")
         
-        viewControllers = [home, favorite, account]
+        let searchImage = UIImage(systemName: "magnifyingglass")
+        let searchVC = Injection().container.resolve(SearchViewController.self)
+        let search = templateNavigationController(image: searchImage, rootViewController: searchVC!, title: "Search")
+        
+        viewControllers = [home, favorite, search, account]
     }
     
     // MARK: - Helper

@@ -12,6 +12,7 @@ import Combine
 protocol AnimeRemoteDataSource: AnyObject {
     func getListAnime(withGenreId genreId: Int) -> AnyPublisher<[AnimeResponse], Error>
     func getAnimeDetail(withId id: Int) -> AnyPublisher<AnimeResponse, Error>
+    func searchAnime(withQuery query: String) -> AnyPublisher<[AnimeResponse], Error>
 }
 
 class AnimeRemoteDataSourceImpl: AnimeRemoteDataSource {
@@ -49,6 +50,32 @@ class AnimeRemoteDataSourceImpl: AnimeRemoteDataSource {
                 AF.request(url)
                   .validate()
                   .responseDecodable(of: AnimeDetailResponse.self) { response in
+                    switch response.result {
+                    case .success(let value):
+                        completion(.success(value.data))
+                    case .failure:
+                      completion(.failure(URLError.invalidResponse))
+                    }
+                  }
+            }
+        }.eraseToAnyPublisher()
+    }
+    
+    func searchAnime(withQuery query: String) -> AnyPublisher<[AnimeResponse], Error> {
+        return Future<[AnimeResponse], Error> { completion in
+            var components = URLComponents(string: Endpoints.Get.anime.url)!
+            components.queryItems = [
+                URLQueryItem(name: "q", value: query),
+                URLQueryItem(name: "page", value: "1"),
+                URLQueryItem(name: "limit", value: "10"),
+                URLQueryItem(name: "sort", value: "asc"),
+                URLQueryItem(name: "order_by", value: "popularity")
+            ]
+            
+            if let url = components.url {
+                AF.request(url)
+                  .validate()
+                  .responseDecodable(of: AnimeResponses.self) { response in
                     switch response.result {
                     case .success(let value):
                         completion(.success(value.data))

@@ -8,6 +8,7 @@
 import UIKit
 
 class AccountViewController: UIViewController {
+    // MARK: - Properties
     private var imageProfileHeader: AccountHeaderUIView?
 
     private let accountTableView: UITableView = {
@@ -17,6 +18,7 @@ class AccountViewController: UIViewController {
         return tableView
     }()
     
+    // MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = false
@@ -38,6 +40,7 @@ class AccountViewController: UIViewController {
         configureConstraint()
     }
 
+    // MARK: - Helper
     private func configureConstraint() {
         let accountTableViewConstraints = [
             accountTableView.topAnchor.constraint(equalTo: view.topAnchor),

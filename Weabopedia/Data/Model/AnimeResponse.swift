@@ -5,8 +5,6 @@
 //  Created by Enrico Irawan on 29/11/22.
 //
 
-import Foundation
-
 // MARK: - AnimeResponses
 struct AnimeResponses: Codable {
     let data: [AnimeResponse]
@@ -22,10 +20,12 @@ struct AnimeResponse: Codable {
     let episodes: Int?
     let status: String
     let aired: AiredResponse
-    let duration, rating: String
-    let score: Double
-    let scoredBy, rank: Int
-    let synopsis: String
+    let duration: String
+    let rating: String?
+    let score: Double?
+    let scoredBy: Int?
+    let rank: Int
+    let synopsis: String?
     let season: String?
     let year: Int?
     let studios, genres: [FlexibleResponse]
