@@ -60,7 +60,22 @@ class DetailHeaderView: UICollectionReusableView {
         stackView.axis = .horizontal
         stackView.distribution = .fillProportionally
         stackView.alignment = .center
-        stackView.spacing = 5
+        return stackView
+    }()
+
+    private let metaContainer: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.alignment = .leading
+        return stackView
+    }()
+    
+    private let infoContainer: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .equalCentering
+        stackView.alignment = .leading
         return stackView
     }()
     
@@ -118,69 +133,31 @@ class DetailHeaderView: UICollectionReusableView {
             paddingTop: 20,
             paddingLeft: 10,
             width: 150,
-            height: 220
+            height: 210
         )
         
-        addSubview(title)
-        title.anchor(
+        addSubview(infoContainer)
+        scoreContainer.addArrangedSubview(scoreIcon)
+        scoreContainer.addArrangedSubview(scoreDescription)
+
+        metaContainer.addArrangedSubview(title)
+        metaContainer.addArrangedSubview(titleEnglish)
+        metaContainer.addArrangedSubview(rating)
+        metaContainer.addArrangedSubview(status)
+        metaContainer.addArrangedSubview(scoreContainer)
+        
+        infoContainer.addArrangedSubview(metaContainer)
+        
+        infoContainer.addArrangedSubview(favoriteButton)
+        favoriteButton.setDimensions(width: 200, height: 40)
+        infoContainer.anchor(
             top: safeAreaLayoutGuide.topAnchor,
             leading: poster.trailingAnchor,
             trailing: trailingAnchor,
             paddingTop: 20,
             paddingLeft: 10,
-            paddingBottom: 10,
-            paddingRight: 10
-        )
-        
-        addSubview(titleEnglish)
-        titleEnglish.anchor(
-            top: title.bottomAnchor,
-            leading: poster.trailingAnchor,
-            trailing: trailingAnchor,
-            paddingLeft: 10,
-            paddingRight: 10
-        )
-        
-        addSubview(rating)
-        rating.anchor(
-            top: titleEnglish.bottomAnchor,
-            leading: poster.trailingAnchor,
-            trailing: trailingAnchor,
-            paddingTop: 10,
-            paddingLeft: 10,
-            paddingRight: 10
-        )
-        
-        addSubview(status)
-        status.anchor(
-            top: rating.bottomAnchor,
-            leading: poster.trailingAnchor,
-            trailing: trailingAnchor,
-            paddingTop: 10,
-            paddingLeft: 10,
-            paddingRight: 10
-        )
-        
-        addSubview(scoreContainer)
-        scoreContainer.addArrangedSubview(scoreIcon)
-        scoreContainer.addArrangedSubview(scoreDescription)
-        scoreContainer.anchor(
-            top: status.bottomAnchor,
-            leading: poster.trailingAnchor,
-            trailing: trailingAnchor,
-            paddingLeft: 10,
-            paddingRight: 10
-        )
-        
-        addSubview(favoriteButton)
-        favoriteButton.anchor(
-            top: scoreContainer.bottomAnchor,
-            leading: poster.trailingAnchor,
-            bottom: poster.bottomAnchor,
-            trailing: trailingAnchor,
-            paddingLeft: 10,
             paddingRight: 10,
-            height: 40
+            height: 210
         )
     }
     

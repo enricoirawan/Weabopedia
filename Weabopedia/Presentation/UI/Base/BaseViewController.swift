@@ -24,7 +24,10 @@ class BaseViewController: UITabBarController {
         let favoriteImage = UIImage(systemName: "heart")
         let favorite = templateNavigationController(image: favoriteImage, rootViewController: FavoriteViewController(), title: "Favorite")
         
-        viewControllers = [home, favorite]
+        let accountImage = UIImage(systemName: "person")
+        let account = templateNavigationController(image: accountImage, rootViewController: AccountViewController(), title: "Account")
+        
+        viewControllers = [home, favorite, account]
     }
     
     // MARK: - Helper

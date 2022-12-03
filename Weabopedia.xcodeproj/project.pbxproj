@@ -17,6 +17,8 @@
 		1766F76A293A8102007C141B /* AiredCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766F769293A8102007C141B /* AiredCollectionViewCell.swift */; };
 		1766F76C293A810A007C141B /* SeasonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766F76B293A810A007C141B /* SeasonCollectionViewCell.swift */; };
 		1766F76E293A8110007C141B /* StudioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766F76D293A8110007C141B /* StudioCollectionViewCell.swift */; };
+		1766F771293A9327007C141B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766F770293A9327007C141B /* AccountViewController.swift */; };
+		1766F773293A941A007C141B /* AccountHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766F772293A941A007C141B /* AccountHeaderUIView.swift */; };
 		17717FF129366DEE00803B5C /* AnimeRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17717FF029366DEE00803B5C /* AnimeRemoteDataSource.swift */; };
 		17717FF429366E7A00803B5C /* CustomErrorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17717FF329366E7A00803B5C /* CustomErrorExt.swift */; };
 		17717FF629366F1B00803B5C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17717FF529366F1B00803B5C /* Network.swift */; };
@@ -62,6 +64,8 @@
 		1766F769293A8102007C141B /* AiredCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiredCollectionViewCell.swift; sourceTree = "<group>"; };
 		1766F76B293A810A007C141B /* SeasonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonCollectionViewCell.swift; sourceTree = "<group>"; };
 		1766F76D293A8110007C141B /* StudioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioCollectionViewCell.swift; sourceTree = "<group>"; };
+		1766F770293A9327007C141B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		1766F772293A941A007C141B /* AccountHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHeaderUIView.swift; sourceTree = "<group>"; };
 		17717FF029366DEE00803B5C /* AnimeRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeRemoteDataSource.swift; sourceTree = "<group>"; };
 		17717FF329366E7A00803B5C /* CustomErrorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorExt.swift; sourceTree = "<group>"; };
 		17717FF529366F1B00803B5C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -127,6 +131,14 @@
 				174FA54729371FBF00765B66 /* Injection.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		1766F76F293A9318007C141B /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				1766F770293A9327007C141B /* AccountViewController.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		17717FF229366E3D00803B5C /* Utils */ = {
@@ -245,7 +257,7 @@
 		1776245C29366542003ECBA0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				1776246929366707003ECBA0 /* Response */,
+				1776246929366707003ECBA0 /* Model */,
 				17717FF7293675A300803B5C /* Repository */,
 				17762468293666E5003ECBA0 /* Remote */,
 			);
@@ -280,14 +292,14 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
-		1776246929366707003ECBA0 /* Response */ = {
+		1776246929366707003ECBA0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				1776246A29366714003ECBA0 /* AnimeResponse.swift */,
 				17F6F479293742AD00B3B041 /* GenreResponse.swift */,
 				1758EAB6293A0370002573A6 /* AnimeDetailResponse.swift */,
 			);
-			path = Response;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		17B285FE29391BB20041CC95 /* Detail */ = {
@@ -335,6 +347,7 @@
 				1766F769293A8102007C141B /* AiredCollectionViewCell.swift */,
 				1766F76B293A810A007C141B /* SeasonCollectionViewCell.swift */,
 				1766F76D293A8110007C141B /* StudioCollectionViewCell.swift */,
+				1766F772293A941A007C141B /* AccountHeaderUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,6 +355,7 @@
 		17F6F48A2937702700B3B041 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1766F76F293A9318007C141B /* Account */,
 				17F6F47229372E8E00B3B041 /* Base */,
 				17B285FE29391BB20041CC95 /* Detail */,
 				17F6F47129372E8200B3B041 /* Home */,
@@ -454,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1766F771293A9327007C141B /* AccountViewController.swift in Sources */,
 				1766F76E293A8110007C141B /* StudioCollectionViewCell.swift in Sources */,
 				17F6F486293748D900B3B041 /* GetListGenreUseCase.swift in Sources */,
 				17F6F47429372EB200B3B041 /* BaseViewController.swift in Sources */,
@@ -478,6 +493,7 @@
 				1771800129367BDE00803B5C /* AnimeMapper.swift in Sources */,
 				17F6F4842937475400B3B041 /* GenreMapper.swift in Sources */,
 				17B2860429392B670041CC95 /* SynopsisCollectionViewCell.swift in Sources */,
+				1766F773293A941A007C141B /* AccountHeaderUIView.swift in Sources */,
 				17717FF129366DEE00803B5C /* AnimeRemoteDataSource.swift in Sources */,
 				1776246B29366714003ECBA0 /* AnimeResponse.swift in Sources */,
 				17F6F48C293770CB00B3B041 /* GenreCollectionViewCell.swift in Sources */,

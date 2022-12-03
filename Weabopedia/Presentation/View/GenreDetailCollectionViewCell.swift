@@ -66,7 +66,7 @@ class GenreDetailCollectionViewCell: UICollectionViewCell {
         var genreList = ""
         
         for item in genres {
-            genreList.append(item.name)
+            genreList.append(" \(item.name)")
         }
         
         genreText.text = genreList

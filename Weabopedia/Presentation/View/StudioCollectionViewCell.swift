@@ -66,7 +66,7 @@ class StudioCollectionViewCell: UICollectionViewCell {
         var studioList = ""
         
         for item in studios {
-            studioList.append(item.name)
+            studioList.append(" \(item.name)")
         }
         
         studioText.text = studioList
